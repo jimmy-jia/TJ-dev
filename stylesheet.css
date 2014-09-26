@@ -1,0 +1,248 @@
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	background-color:white;
+	background-image: url('BG.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	margin:0;
+	padding:0;
+}
+h1, h5{color:white; text-shadow:1px 1px grey;}
+.all {
+	border: 4px double grey;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 23px 23px 23px 23px;
+}
+.inner {
+	background-color:silver;
+	border-radius: 20px;
+}
+.tnav{
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+.tnav1{
+	margin-left:10px;
+	white-space:nowrap;
+	text-align:center;
+}
+.tnav1 a{
+	color:#ededed;
+	font-family:impact, serif;
+	width:69%;
+	text-shadow:0px 1px #707070;
+	text-decoration:none;
+	font-size: 300%;
+	margin-right: 17px;
+	transition: color .4s;
+}
+.tnav1 a:hover {
+	color: white;
+	text-shadow:0px 1px grey;
+}
+.title{
+	background-image: url('img.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	color:white;
+	text-align:left;
+	background-position: center center;
+	border: 3px double white;
+	border-radius:3px;
+	padding-top:3px;
+	padding-bottom:3px;
+	width:99%;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:3px;
+	text-shadow: 1px 1px grey;
+	font-family:verdana;
+}
+.title img {
+	float: left;
+	margin-right: 15px;
+	margin-top: -10px;
+	margin-left:10px;
+}
+.title h3{
+	font-family: Tahoma, serif;
+	font-style: normal;
+	text-shadow: 1px 1px grey;
+}
+.title h1{
+	font-family: Tahoma, serif;
+	font-size: 300%;
+	text-shadow: 1px 1px grey;
+}
+.mission {
+	color: white;
+	background-image: url('box1.png');
+	background-size: cover;
+	text-align: center;
+	background-color: #D7D7D7;
+	width: 99%;
+	border: 3px solid grey;/*#E9E9E9;*/
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'shift', sans-serif;
+	margin-bottom:5px;
+	text-shadow: 1px 1px grey;
+}
+.mission h3{
+	font-size: 25px;
+	text-shadow: 1px 1px grey;
+}
+#m-container{
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+	background-color:grey;
+	border-right:5px double #a6a6a6;
+	border-left:5px double #a6a6a6;
+	padding:10px;
+	border-radius:5px;
+}
+.pics {
+	margin-left:auto;
+	margin-right:auto;
+	width:99%;
+	white-space: nowrap;
+}
+.pics img{
+	width: 19%;
+	height: 130px;
+	margin-left:auto;
+	margin-right:auto;
+	border: 3px solid grey;
+	border-radius: 5px;
+}
+.text {
+	text-shadow: 1px 1px grey;
+	color: white;
+	background-image: url('box1.png');
+	text-align: center;
+	background-color: #D7D7D7;
+	width: 99%;
+	border: 3px solid grey;/*#E9E9E9;*/
+	border-radius: 5px 5px 19px 19px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Shift', sans-serif;
+	padding-bottom: 5px;
+}
+.text a{
+	text-decoration:none;
+	padding: 8px;
+	color: white;
+}
+
+.text a:hover{
+	color: blue;
+}
+
+
+
+@media print, screen and (max-width: 1720px) {
+	.tnav a{
+		font-size:250%;
+		margin-right:17px;
+	}
+}
+
+
+
+@media print, screen and (max-width: 1459px) {
+	.tnav a{
+		font-size:200%;
+		margin-right:17px;
+	}
+}
+
+@media print, screen and (max-width: 1220px) {
+	.tnav a{
+		font-size:150%;
+		margin-right:8px;
+	}
+	.pics img{
+		height:100px;
+		width:19%;
+	}
+}
+
+@media print, screen and (max-width: 899px) {
+	.title h1{
+		font-size: 225%;
+	}
+	#logo{
+		height:156px;
+		width:159px;
+	}
+	.tnav a{
+		font-size:125%;
+		margin-right:1px;
+	}
+	.tnav1{
+		margin-left:3px;
+	}
+	.mission p{
+		padding:5px;
+	}
+	#m-container{
+		width:100%;
+		border:0;
+		background-color:transparent;
+		padding:0;
+	}
+	.pics{
+		display:none;
+	}
+}
+
+@media print, screen and (max-width: 700px) {
+	.tnav a{
+		font-size:100%;
+		margin-right:1px;
+	}
+	.title h1{
+		font-size: 180%;
+	}
+	.title p{
+		font-size:90%;
+	}
+}
+
+@media print, screen and (max-width: 599px) {
+	.all {
+		width:95%;
+	}
+	.title img{
+		margin-right:5px;
+	}
+	#logo{
+		height:126px;
+		width:128px;
+	}
+	.title h1{
+		font-size: 150%;
+	}
+	.title p{
+		font-size:80%;
+	}
+}
+
+@media print, screen and (max-width: 419px) {
+	.tnav a{
+		font-size:80%;
+	}
+	.title p{
+		font-size:70%;
+	}
+
+}
