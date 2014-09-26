@@ -7,6 +7,7 @@ body{
 	background-image: url('BG.png');
 	background-size:cover;
 	background-repeat:no-repeat;
+	background-attachment:fixed;
 	margin:0;
 	padding:0;
 }
@@ -143,9 +144,74 @@ h1, h5{color:white; text-shadow:1px 1px grey;}
 	padding: 8px;
 	color: white;
 }
-
-.text a:hover{
-	color: blue;
+.text a:hover{color: blue;}
+.faq {
+	color: white;
+	background-image: url('box1.png');
+	border: 3px solid grey;
+	text-align: center;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	background-size: cover;
+}
+.faq p{text-shadow: 1px 1px grey;}
+.faq h2{text-shadow: 1px 1px grey;}
+/* nav */
+.etabs {
+	position: relative;
+	margin: 20px 0;
+}
+.etabs ul {
+	margin: 0;
+	padding: 0;
+}
+.etabs li {
+	margin: 0 5px 0 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+.etabs a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #E9E9E9;
+	line-height: 100%;
+}
+.etabs a:hover {
+	color: white;
+}
+.tab { 
+	display: inline-block; zoom:1; *display:inline;
+}
+.tab a { 
+	font-size: 15px; 
+	line-height: 2em; 
+	display: block; 
+	padding: 0 10px; 
+	outline: none; 
+}
+.tab.active { 
+	background: #999; 
+	position: relative; 
+	top: 1px; 
+	border-color: #666; 
+	border-radius: 5px; 
+	color: #fff;
+}
+.tab a.active { 
+	font-weight: bold; 
+	color: white;
+}
+ol {
+	text-align: left;
+	margin-left:25%;
+	}
+.content {
+	display:none;
 }
 
 
@@ -245,5 +311,19 @@ h1, h5{color:white; text-shadow:1px 1px grey;}
 	.title p{
 		font-size:70%;
 	}
-
+	body{
+		overflow: hidden;
+	}
+}
+@media print, screen and (max-width: 359px) {
+	.tnav a{
+		font-size:75%;
+	}
+	.title h1{
+		font-size: 130%;
+		padding-bottom:30px;
+	}
+	.title p{
+		display:none;
+	}
 }

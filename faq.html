@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type= "text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>TJ Acupuncture Clinic</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Home of TJ Acupuncture, acupuncture you can trust. Serving the Portland, Oregon metro area.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico">
+<!--		<script>
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+			window.location = "m.tj.com";
+			}-->
+		</script>
+		<script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+		<script src="jquery.hashchange.min.js" type="text/javascript"></script>
+		<script src="jquery.easytabs.js" type="text/javascript"></script>
+			<script type="text/javascript"> 
+				$(document).ready(function(){ $('#tab-container').easytabs(); });
+			</script> 	
+		<script type="text/javascript">
+			var collapseDivs, collapseLinks;
+
+			function createDocumentStructure (tagName) {
+			if (document.getElementsByTagName) {
+			var elements = document.getElementsByTagName(tagName);
+			collapseDivs = new Array(elements.length);
+			collapseLinks = new Array(elements.length);
+			for (var i = 0; i < elements.length; i++) {
+				var element = elements[i];
+				var siblingContainer;
+				if (document.createElement && 
+				(siblingContainer = document.createElement('div')) &&
+				siblingContainer.style) 
+				{
+					var nextSibling = element.nextSibling;
+					element.parentNode.insertBefore(siblingContainer, nextSibling);
+					var nextElement = elements[i + 1];
+					while (nextSibling != nextElement && nextSibling != null) {
+					var toMove = nextSibling;
+					nextSibling = nextSibling.nextSibling;
+					siblingContainer.appendChild(toMove);
+				}
+				siblingContainer.style.display = 'none';
+        
+				collapseDivs[i] = siblingContainer;
+        
+				createCollapseLink(element, siblingContainer, i);
+				}
+				else {
+				// no dynamic creation of elements possible
+				return;
+				}
+			}
+			createCollapseExpandAll(elements[0]);
+  }
+}
+
+function createCollapseLink (element, siblingContainer, index) {
+  var span;
+  if (document.createElement && (span = document.createElement('span'))) {
+    span.appendChild(document.createTextNode(String.fromCharCode(160)));
+    var link = document.createElement('a');
+    link.collapseDiv = siblingContainer;
+    link.href = '#';
+    link.appendChild(document.createTextNode('expand'));
+    link.onclick = collapseExpandLink;
+    collapseLinks[index] = link;
+    span.appendChild(link);
+    element.appendChild(span);
+  }
+}
+
+function collapseExpandLink (evt) {
+  if (this.collapseDiv.style.display == '') {
+    this.parentNode.parentNode.nextSibling.style.display = 'none';
+    this.firstChild.nodeValue = 'expand';
+  }
+  else {
+    this.parentNode.parentNode.nextSibling.style.display = '';
+    this.firstChild.nodeValue = 'collapse';
+  }
+
+  if (evt && evt.preventDefault) {
+    evt.preventDefault();
+  }
+  return false;
+}
+
+function expandAll (evt) {
+  for (var i = 0; i < collapseDivs.length; i++) {
+    collapseDivs[i].style.display = '';
+    collapseLinks[i].firstChild.nodeValue = 'collapse';
+  }
+  
+  if (evt && evt.preventDefault) {
+    evt.preventDefault();
+  }
+  return false;
+}
+
+function collapseAll (evt) {
+  for (var i = 0; i < collapseDivs.length; i++) {
+    collapseDivs[i].style.display = 'none';
+    collapseLinks[i].firstChild.nodeValue = 'expand';
+  }
+  
+  if (evt && evt.preventDefault) {
+    evt.preventDefault();
+  }
+  return false;
+}
+</script>
+		<script type="text/javascript">
+			window.onload = function (evt) {
+			createDocumentStructure('h5');
+			}
+		</script>
+		<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="all">
+			<div class="inner">
+				<div class="tnav">
+					<div class="tnav1">
+						<a href="index.html">HOME</a>
+						<a href="services.html">SERVICES</a>
+						<a href="about.html">ABOUT</a>
+						<a href="faq.html">FAQ</a>
+						<a href="location.html">LOCATION</a>
+						<a href="gallery.html">GALLERY</a>
+						<a href="contactus.php">CONTACT US</a>
+					</div>
+				</div>
+				<div class="title">
+					<div class="t-container">
+						<img src="logo.png" height="206px" width="210px" id="logo"></img>
+						<h3>Welcome to</h3>
+						<h1>TJ Acupuncture</h1>
+						<p>Acupuncture and Herbal Clinic</p>
+					</div>
+				</div>
+				<div class="faq">
+					<div class="tabs">
+						<h2>Frequently Asked Questions</h2>
+							<p>It is not unusual to have many questions about acupuncture.</p>
+							<p>In fact, it is good to have questions. Your body is important and it is vital to know what effects treatment can have on your body</p>
+						<div class="tab-container" id='tab-container'>
+								<ul class='etabs'>
+									<li class='tab'><a href="#acupuncture">Acupuncture</a></li>
+									<li class='tab'><a href="#safety">Safety</a></li>
+									<li class='tab'><a href="#treatments">Treatments</a></li>
+									<li class='tab'><a href="#conditions">Conditions Treated</a></li>
+									<li class='tab'><a href="#payments">Payments</a></li>
+								</ul>
+							<div id="acupuncture">
+								<h2>What is acupuncture?</h2>
+								<p>Acupuncture is the stimulation of specific acupoints along the skin of the body involving various methods </p>
+								<p>such as penetration by thin needles or the application of heat, pressure, or laser light.</p>					
+								<h2>How does acupuncture work? </h2>
+								<p>Traditional acupuncture is based on ancient Chinese theories of the flow of Qi (Energy) and Xue (Blood) 
+								</p><p>through distinct meridians that cover the whole body. No pain if the Qi flow freely. if there is pain, 
+								</p><p>the Qi is blocked. Acupuncture regulates and restores the harmonious Qi flow in the body.</p>
+								<h2>Are there different styles of acupuncture?</h2>
+								<p>Yes, there are. Acupuncture originated in China but has spread to all over the world. In different countries, different styles have developed </p>
+								<p>based on differing opinions. Patients should talk to their practitioners about their particular style and learn as much as possible prior to treatment.</p>
+								<h2>What are the other aspects of Chinese Medicine?</h2>
+								<p>Acupuncture is just one branch of traditional Chinese medicine. Some of the others include:</p>
+								<p>Herbal Medicine, Chinese Diet Therapy, Tui-Na massage, and Qi Gong.</p>
+							</div>
+							<div id="safety">
+								<h2>Is it safe?</h2>
+								<p>Yes, under the care of a licensed professional, acupuncture is very safe</p>
+								<h2>How deep do the needles go?</h2>
+								<p>Usually needles are inserted between 0.5 to 1.5 inches into the body. This depends on the nature of the problem, </p>
+								<p>the location of the points, the patient's size, age, and constitution. It also widely varies depending on the style employed by the acupuncturist.
+								<h2>Does it hurt?</h2>
+								<p>Acupuncture needles are fine and flexible, just like human hair. While you may feel some heaviness, distension, tingling, or electric sensations</p>
+								<p>either around the needle or travelling up or down the affected meridian, this is perfectly normal. In fact, it is called DE QI, and is essential for good results.</p>
+							</div>
+							<div id="treatments">
+								<h2>How many treatments and how often will I need them?</h2>
+								<p>This depends largely on what is being treated. Usually acute conditions respond much faster while</p>
+								<p>chronic ailments may require several weeks or longer for treatment.</p>
+								<h2>How long do treatments take?</h2>
+								<p>Depending on the patient's condition and treatment plan, needles usually remain in the patient for 20-30 minutes.</p>
+								<p>The initial appointment is typically 1 hour and 30 minutes long, to create a treatment plan suitable for you.</p>
+								<h2>Is there anything I need to do before receiving an acupuncture treatment?</h2>
+								<p>Yes, the following suggestions will help you get the maximum benefits from your treatment:</p>
+								<ol>
+									<li>Maintain good personal hygiene to reduce possibility of bacterial infection</li>
+									<li>Wear loose clothing and avoid wearing tight stockings.</li>
+									<li>Avoid treatment when excessively fatigued, hungry, full, upset, or shortly after sex.</li>
+								</ol>
+								<div style="width:100%;">
+									<h2>Can acupuncture help even if I'm healthy?</h2>
+									<p>Yes, absolutely. Acupuncture can be used as a preventive medicine. It can stimulate immune fuction, which helps increase</p>
+									<p>resistance to bacterial and viral infections. Acupuncture can also dramatically increase your overall vitality and energy.</p>
+									<p>It treats underlying causes, which results in a deeper kind of healing. It brings out profound changes in people's lives on</p>
+									<p>the emotional level as well.</p>
+									</div>
+									</div>
+								<div id="conditions">
+									<h2>Conditions Treated</h2>
+									<p>Acupuncture treats a wide range of ailments and illnesses. To see a list, please click to expand:</p>
+									<div>
+									<h5>Click to</h5>
+										<div style="width:1000px; margin:1px;">
+											<div style="width:250px; float:left;">
+												<h4>Pain Management</h4>
+												<p>Back Pain</p>
+												<p>Bursitis</p>
+												<p>Carpal Tunnel</p>
+												<p>Fibromyalgia</p>
+												<p>Headaches</p>
+												<p>Hemorrhoids</p>
+												<p>Hip/Joint/Neck/Leg/Shoulder Pain</p>
+												<p>Neuralgia</p>
+												<p>Sciatica</p>
+												<p>Shingles</p>
+												<p>Sports Injury</p>
+												<p>Tendonitis</p>
+												<p>Whiplash</p>
+												<p>Auto-related injury</p>
+											</div>
+											<div style="width:250px; float:left;">
+												<h4>Common Medical Conditions</h4>
+												<p>Acid Reflex</p>
+												
+												<p>Candida</p>
+												<p>Cholesterol</p>
+												<p>Common Cold</p>
+												<p>Dizziness</p>
+												<p>Fatigue</p>
+												<p>Flu</p>
+												<p>Gallbladder Disorders</p>
+												<p>Hay Fever</p>
+												<p>Immune enhancement</p>
+												<p>Indigestion</p>
+												<p>Insomnia</p>
+												<p>Irritable Bowel Syndrome</p>
+												<p>Kidney related problems</p>
+												<p>Prostate Problems</p>
+												<p>Skin Problems</p>
+											</div>
+											<div style="width:250px; float:left;">
+												<h4>Longer Lasting Ailments</h4>
+												<p>Allergies/Asthma</p>
+												<p>Anxiety/Depression</p>
+												<p>Arthritis</p>
+												<p>Cancer Support</p>
+												<p>Cardiovascular</p>
+												<p>Diabetes</p>
+												<p>Enuresis</p>
+												<p>Erectile Dysfunction</p>
+												<p>Hepatitis A/B/C</p>
+												<p>Herpes</p>
+												<p>Thyroid Conditions</p>
+											</div>
+											<div style="width:250px; float:left;">
+												<h4>Women's Conditions</h4>
+												<p>Anemia</p>
+												<p>Breast Health</p>
+												<p>Dysmenorrhea</p>
+												<p>Endometriosis</p>
+												<p>Low Libido</p>
+												<p>Menopausal Syndrome</p>
+												<p>Menstrual Problems</p>
+												<p>Osteoporosis</p>
+												<p>Post-Partum Bleeding</p>
+												<p>Urinary Tract Infection</p>
+											</div>
+											<br style="clear: left;" />
+										</div>
+										</div>
+								</div>
+								<div id="payments">
+									<h2>Payments</h2>
+									<div style="text-align:left; width:70%; margin-left:15%;">
+									
+									<p><i>In-network insurance coverage:</i> we can verify the acupuncture coverage for you and bill your insurance company directly.</p>
+									<p><i>Out-of-network insurance:</i> you will be expected to pay at time of service, however we will give you a claim form to fill out and send to your insurance company for reimbursement.</p>
+									<p><i>Auto injury claims:</i> treatment will be billed to the MedPay portion of your auto insurance policy.
+									If your insurance carrier denies your claim due to exhausted benefits or any other reason, you will be held financially
+									responsible for all charges incurred for services rendered on your behalf.</p>
+									<p><i>Not covered by insurance:</i> payment at the time of services is required.</p>
+									
+									</div>
+									<h2>Cost</h2>
+									<p>For acupuncture treatments, the initial appointment is $100. Follow up apointments are $80 each.</p>
+									<p>For herbal treatments, the initial apointment is $60, and follow up appointments $40. Herb fees range from $5-10 per day.</p>
+									
+									<h2>Payment Method</h2>
+									<p>At TJ Acupuncture we want to let you pay in whatever way is most convenient for you.</p>
+									<p>We accept cash, check, and bitcoin currently. Credit and debit card payments will be supported in the future.</p>
+									<!--<p>All major credit cards, checks, cash, and bitcoins are accepted.</p>-->
+									<p>Please <a href="contactus.html" style="color:white;">contact us</a> if you would like a quote on your treatment.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					
+					<div class="text">
+						<div id="container">
+							<h3>Learn more about us here!</h3>
+							<a href="location.html">The Clinic</a>
+							<a href="about.html">Taiping</a>
+							<a href="faq.html">Acupuncture</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
+	
