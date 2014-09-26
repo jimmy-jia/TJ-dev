@@ -136,6 +136,7 @@ h1, h5{color:white; text-shadow:1px 1px grey;}
 	margin-right: auto;
 	font-family: 'Shift', sans-serif;
 	padding-bottom: 5px;
+	background-size:cover;
 }
 .text a{
 	text-decoration:none;
